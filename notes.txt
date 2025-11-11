@@ -1,0 +1,21 @@
+My first devops notes:
+
+What does /etc store?
+
+This will store all the configuration files
+
+Difference between absolute and relative path?
+
+absolute path will start with a / like /home/nmsworks/file.txt
+
+releative path = current folder
+
+Command to list hidden files?
+
+ls -a
+
+Shortcut to go to your home directory?
+
+~
+
+

@@ -1,0 +1,27 @@
+ls /etc | head
+ 1978  cd ~
+ 1979  mkdir -p devopspractice/week1
+ 1980  cd devopspractice/week1/
+ 1981  pwd
+ 1982  touch hello.txt notes.txt
+ 1983  echo "hello" > hello.txt 
+ 1984  echo "My first devops notes" > notes.txt 
+ 1985  echo "Viajayaraj!" >> hello.txt 
+ 1986  cat hello.txt 
+ 1987  echo "hello Vijayaraj!" > hello.txt 
+ 1988  cat hello.txt 
+ 1989  nano notes.txt 
+ 1990  cd ../../
+ 1991  ls
+ 1992  cd home/
+ 1993  ls
+ 1994  cd nmsworks/
+ 1995  ls
+ 1996  ~/devops-practice/week1/
+ 1997  cd /root/devopspractice/week1/
+ 1998  ls
+ 1999  rm -rf notes.txt.save 
+ 2000  ls
+ 2001  vim notes.txt 
+ 2002  touch commands.txt
+

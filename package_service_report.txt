@@ -1,0 +1,21 @@
+===== PACKAGE & SERVICE REPORT =====
+Installed Packages:
+ii  libnginx-mod-http-image-filter             1.18.0-0ubuntu1.7                    amd64        HTTP image filter module for Nginx
+ii  libnginx-mod-http-xslt-filter              1.18.0-0ubuntu1.7                    amd64        XSLT Transformation module for Nginx
+ii  libnginx-mod-mail                          1.18.0-0ubuntu1.7                    amd64        Mail module for Nginx
+ii  libnginx-mod-stream                        1.18.0-0ubuntu1.7                    amd64        Stream module for Nginx
+ii  nginx                                      1.18.0-0ubuntu1.7                    all          small, powerful, scalable web/proxy server
+ii  nginx-common                               1.18.0-0ubuntu1.7                    all          small, powerful, scalable web/proxy server - common files
+ii  nginx-core                                 1.18.0-0ubuntu1.7                    amd64        nginx web/proxy server (standard version)
+
+Service Status:
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; disabled; vendor preset: enabled)
+     Active: active (running) since Tue 2025-11-11 13:18:51 IST; 49min ago
+       Docs: man:nginx(8)
+   Main PID: 108307 (nginx)
+      Tasks: 5 (limit: 18560)
+     Memory: 5.0M
+     CGroup: /system.slice/nginx.service
+             ├─108307 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             ├─108308 nginx: worker process

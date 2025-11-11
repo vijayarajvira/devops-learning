@@ -1,0 +1,7 @@
+Top 5 CPU consuming processes:
+    PID COMMAND         %MEM %CPU
+  20114 chrome           2.3  4.9
+    473 irq/29-iwlwifi   0.0  4.5
+   4645 gnome-shell      1.8  3.5
+  10397 chrome           2.8  3.2
+  85295 chrome           0.5  2.5

@@ -1,0 +1,16 @@
+===== USER & GROUP REPORT =====
+Current User: root
+
+User List:
+openvpn:x:129:136::/nonexistent:/usr/sbin/nologin
+postgres:x:130:137:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+devops:x:1002:1002::/home/devops:/bin/sh
+developer:x:1003:1003::/home/developer:/bin/sh
+qa:x:1004:1004::/home/qa:/bin/sh
+
+Group List:
+devops:x:1002:
+developer:x:1003:
+qa:x:1004:
+project_team:x:1005:developer
+admin_team:x:1006:devops

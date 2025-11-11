@@ -1,0 +1,30 @@
+chmod: This is the command used to change file mode bits (permissions).
+755: This is the octal representation of the permissions being set, broken down as follows:
+7 (Owner): This grants the file's owner read, write, and execute permissions. In binary, 7 is 111, where each 1 represents a permission (read=4, write=2, execute=1). 
+5 (Group): This grants the group associated with the file read and execute permissions, but no write permissions. In binary, 5 is 101.
+5 (Others): This grants all other users on the system read and execute permissions, but no write permissions. In binary, 5 is 101.
+In summary, when you apply chmod 755 to a file or directory:
+The owner has full permissions: read, write, and execute.
+The group associated with the file has read and execute permissions. 
+Other users: on the system have read and execute permissions.
+This is a common permission setting for executable files and directories that you want to make publicly readable and traversable, but only modifiable by the owner.
+
+
+Understanding the 644 numeric code:
+Permissions in Octal: Linux file permissions are represented by a three-digit octal number (like 644). Each digit corresponds to a specific set of users:
+Owner: The first digit represents the permissions for the file's owner.
+Group: The second digit represents the permissions for the group associated with the file.
+Others: The third digit represents the permissions for all other users on the system.
+Permission Values: Each permission type (read, write, execute) has a numerical value:
+Read (r): 4
+Write (w): 2
+Execute (x): 1
+Calculating the Digits: The digits in 644 are calculated by summing the numerical values of the desired permissions for each user category:
+Owner (6): Read (4) + Write (2) = 6. This means the owner has both read and write permissions.
+Group (4): Read (4) = 4. This means the group has only read permissions.
+Others (4): Read (4) = 4. This means all other users have only read permissions.
+In summary, when you execute chmod 644 filename:
+The owner of filename can read and write to the file.
+The group associated with filename can only read the file.
+Other: users on the system can only read the file. 
+This permission setting is commonly used for regular text files or configuration files where the owner needs full control, but others only need to view the content.

@@ -1,0 +1,7 @@
+total 20
+-rw-r--r-- 1 root root  625 Nov 11 11:07 commands.txt
+-rwxrwxr-x 1 root root   31 Nov 11 11:47 hello.txt
+-rw-r--r-- 1 root root  319 Nov 11 11:06 notes.txt
+-rw-r--r-- 1 root root 2347 Nov 11 11:53 permission_notes.txt
+-rw-r--r-- 1 root root    0 Nov 11 11:54 permission_output.txt
+-rw-r--r-- 1 root root   27 Nov 11 11:45 run.sh

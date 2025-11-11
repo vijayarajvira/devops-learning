@@ -18,4 +18,4 @@ Shortcut to go to your home directory?
 
 ~
 
-
+Day 8 - Git basics learned.

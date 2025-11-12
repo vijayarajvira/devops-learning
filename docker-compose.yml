@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web:
+    image: vijayarajvira/hello-docker:v2
+    container_name: hello-container
+    ports:
+      - "8081:80"
+    restart: always
+

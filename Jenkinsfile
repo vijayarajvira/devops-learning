@@ -57,5 +57,4 @@ pipeline {
             echo '❌ Deployment failed, check logs.'
         }
     }
-}
 

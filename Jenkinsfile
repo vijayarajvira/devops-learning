@@ -45,20 +45,20 @@ pipeline {
         }
 
         stage('Deploy using Docker Compose') {
-            steps {
-                echo '🚀 Deploying using Docker Compose...'
-                script {
-                    sh '''
-                        echo "🧹 Removing old containers..."
-                        docker-compose down || true
-                        
-                        echo "🆕 Deploying new version..."
-                        docker-compose pull
-                        docker-compose up -d
-                    '''
-                }
-            }
+    steps {
+        echo '🚀 Deploying using Docker Compose...'
+        script {
+            sh '''
+            echo 🧹 Removing old containers...
+            docker compose down || true
+
+            echo 🆕 Deploying new version...
+            docker compose pull
+            docker compose up -d
+            '''
         }
+    }
+}
 
         stage('Health Check') {
             steps {

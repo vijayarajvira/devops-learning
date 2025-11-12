@@ -1,13 +1,16 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Checkout') {
-            steps {
-                echo 'Cloning repository...'
-                git branch: 'main', url: 'https://github.com/vijayarajvira/devops-learning.git'
-            }
-        }
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+    }
+
+   stage('Checkout') {
+    steps {
+        echo 'Cloning repository...'
+        git branch: 'main', url: 'https://github.com/vijayarajvira/devops-learning.git'
+    }
+}
 
         stage('Build') {
             steps {
@@ -19,15 +22,15 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // add test steps here later if needed
             }
         }
 
         stage('Login to Docker Hub') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh 'echo "$PASSWORD" | docker login -u "$USERNAME" --password-stdin'
-                }
+                echo 'Logging into Docker Hub...'
+                sh '''
+                    echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
+                '''
             }
         }
 
@@ -40,10 +43,10 @@ pipeline {
 
         stage('Deploy using Docker Compose') {
             steps {
-                echo 'Deploying container...'
+                echo 'Deploying with Docker Compose...'
                 sh '''
-                docker rm -f hello-container || true
-                docker run -d --name hello-container -p 8081:80 vijayarajvira/hello-docker:v2
+                    docker compose down || true
+                    docker compose up -d
                 '''
             }
         }
@@ -51,11 +54,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Deployment successful!'
+            echo '✅ Deployment successful via Docker Compose!'
         }
         failure {
             echo '❌ Deployment failed, check logs.'
         }
     }
-}
 
